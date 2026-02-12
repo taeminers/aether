@@ -1,27 +1,24 @@
+import { ProductIntro } from "@/components/product/product-intro";
+import { OlfactoryBreakdown } from "@/components/product/olfactory-breakdown";
+import { BottleShowcase } from "@/components/product/bottle-showcase";
+import { PurchaseCTA } from "@/components/product/purchase-cta";
+import { Hero } from "@/components/hero";
+import { IngredientsShowcase } from "@/components/product/ingredients-showcase";
+import { BentoGrid } from "@/components/product/bento-grid";
+import { AmbassadorsSection } from "@/components/product/ambassadors-section";
+
 export default function Home() {
   return (
-    <main className="relative flex min-h-screen flex-col items-center justify-end overflow-hidden">
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover -z-10"
-      >
-        <source src="/videos/hero.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+    <main className="relative min-h-screen bg-black text-white selection:bg-white selection:text-black">
+      {/* Hero Section */}
+      <Hero />
 
-
-
-      <div className="relative z-10 flex flex-col items-center justify-center p-24 text-center">
-        <h2 className="text-xl md:text-3xl font-bold text-white tracking-widest uppercase mb-4">
-          VELUM
-        </h2>
-        <p className="text-xl md:text-xl text-white/80 font-light tracking-wide">
-          Atmospheric Precision
-        </p>
-      </div>
+      {/* Product Details Flow */}
+      <ProductIntro />
+      <IngredientsShowcase />
+      <BentoGrid />
+      <AmbassadorsSection />
+      <PurchaseCTA />
     </main>
   );
 }
