@@ -100,9 +100,7 @@ export function BentoGrid() {
                   
                   {/* Content */}
                   <div className="relative z-10 h-full flex flex-col items-center justify-center text-center p-8 space-y-6">
-                    <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 flex items-center justify-center mb-2 group-hover:scale-110 transition-transform duration-500">
-                      <Globe size={32} strokeWidth={1} className="text-amber-100" />
-                    </div>
+                   
                     
                     <div className="space-y-2">
                       <h3 className="text-xl md:text-3xl font-display font-bold tracking-tight text-amber-50">

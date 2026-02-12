@@ -34,12 +34,14 @@ export function AmbassadorsSection() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16 space-y-4"
+          className="mb-12"
         >
-          <h2 className="text-3xl md:text-5xl font-display font-light tracking-widest uppercase">
-            Ambassadors
+          <span className="block text-sm font-sans tracking-[0.2em] text-zinc-500 uppercase mb-2">
+            The Collective
+          </span>
+          <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tight">
+            Ambassadors.
           </h2>
-          <div className="w-12 h-[1px] bg-white/20 mx-auto" />
         </motion.div>
 
         {/* Ambassadors Grid */}
