@@ -50,7 +50,7 @@ export function IngredientsShowcase() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="group relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden bg-zinc-900"
+              className="group relative h-[400px] md:h-[500px] overflow-hidden bg-zinc-900"
             >
               {/* Card Content */}
               <div className="absolute inset-x-0 bottom-0 p-8 z-20 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">

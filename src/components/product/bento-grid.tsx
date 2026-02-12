@@ -72,7 +72,7 @@ export function BentoGrid() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className={`group relative overflow-hidden rounded-2xl ${
+              className={`group relative overflow-hidden ${
                 item.type === 'image' ? 'bg-zinc-100' : 'bg-amber-950 text-white'
               } ${item.colSpan} ${item.rowSpan} min-h-[300px]`}
             >

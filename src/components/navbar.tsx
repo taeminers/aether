@@ -21,7 +21,8 @@ export function Navbar() {
   const [hasBackground, setHasBackground] = useState(false);
   const pathname = usePathname();
 
-  const isLightPage = pathname?.startsWith("/product");
+  // Assume all pages except home (/) and media (/media) are "light" pages with white backgrounds
+  const isLightPage = pathname !== "/" && pathname !== "/media";
   const textColor = (isLightPage && !hasBackground) ? "text-black" : "text-white";
 
   useMotionValueEvent(scrollY, "change", (latest) => {

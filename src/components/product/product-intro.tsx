@@ -41,7 +41,7 @@ export function ProductIntro() {
         </p>
 
         <div className="pt-8 pb-16">
-          <button className="px-8 py-3 bg-black text-white rounded-full font-medium hover:scale-105 hover:shadow-lg transition-all duration-300">
+          <button className="px-8 py-3 bg-black text-white font-medium hover:scale-105 hover:shadow-lg transition-all duration-300">
             Pre-order now
           </button>
       
