@@ -53,7 +53,6 @@ export default function MediaPage() {
         >
           <source src="/videos/aether-velum.mp4" type="video/mp4" />
         </video>
-        <div className="absolute inset-0 bg-black/20" />
       </section>
 
       {/* Press Grid */}

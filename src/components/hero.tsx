@@ -6,7 +6,7 @@ export function Hero() {
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover opacity-60"
+        className="absolute top-0 left-0 min-w-full min-h-full w-auto h-auto object-cover"
       >
         <source src="/videos/hero.mp4" type="video/mp4" />
         Your browser does not support the video tag.
