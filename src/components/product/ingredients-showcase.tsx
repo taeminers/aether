@@ -94,10 +94,10 @@ export function IngredientsShowcase() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          {/* Navigation Arrows */}
-          <div className="flex justify-end gap-2 mt-4 md:mt-0 md:block">
-            <CarouselPrevious className="static translate-y-0 md:absolute md:-left-12 md:top-1/2 md:-translate-y-1/2 bg-zinc-900 border-zinc-800 text-white hover:bg-zinc-800 hover:text-white" />
-            <CarouselNext className="static translate-y-0 md:absolute md:-right-12 md:top-1/2 md:-translate-y-1/2 bg-zinc-900 border-zinc-800 text-white hover:bg-zinc-800 hover:text-white" />
+          {/* Navigation Arrows - Mobile Only */}
+          <div className="flex justify-end gap-2 mt-4 md:hidden">
+            <CarouselPrevious className="static translate-y-0 bg-zinc-900 border-zinc-800 text-white hover:bg-zinc-800 hover:text-white" />
+            <CarouselNext className="static translate-y-0 bg-zinc-900 border-zinc-800 text-white hover:bg-zinc-800 hover:text-white" />
           </div>
         </Carousel>
       </div>
