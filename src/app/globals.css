@@ -1,26 +1,36 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-background: #0A0A0A;    /* Deeper, inkier black */
+  --color-foreground: #F5F5F0;    /* Softer cream-white, less "digital" */
+  --color-secondary: #8C8C8C;     /* Muted grey for subtle details */
+  
+  /* Luxury Serif for that Fragrance feel */
+  --font-display: var(--font-montserrat), sans-serif; 
+  --font-sans: var(--font-geist-sans), sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    /* Soften the edges of everything */
+    -webkit-font-smoothing: antialiased;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  h1, h2 {
+    font-family: var(--font-display);
+    font-weight: 300; /* Light weight = High luxury */
+    letter-spacing: 0.02em; 
+    text-transform: none; /* Let the serif speak for itself */
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  /* Instead of lines, use soft shadows or blurs */
+  .ethereal-glow {
+    filter: blur(80px);
+    background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0) 70%);
+  }
 }
