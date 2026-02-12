@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { usePathname } from "next/navigation";
 import { useCart } from "@/context/cart-context";
 import { ShoppingBag } from "lucide-react";
 
@@ -18,6 +19,10 @@ export function Navbar() {
   const { scrollY } = useScroll();
   const [hidden, setHidden] = useState(false);
   const [hasBackground, setHasBackground] = useState(false);
+  const pathname = usePathname();
+
+  const isLightPage = pathname?.startsWith("/product");
+  const textColor = (isLightPage && !hasBackground) ? "text-black" : "text-white";
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const previous = scrollY.getPrevious() || 0;
@@ -57,7 +62,7 @@ export function Navbar() {
             src="/logo/aether-logo.png"
             alt="Aether Logo"
             fill
-            className="object-contain"
+            className={`object-contain transition-all duration-300 ${isLightPage && !hasBackground ? "invert" : ""}`}
             priority
           />
         </Link>
@@ -68,7 +73,7 @@ export function Navbar() {
           <Link
             key={link.name}
             href={link.href}
-            className="text-foreground hover:text-white transition-colors duration-300 uppercase tracking-widest text-sm font-light mix-blend-difference"
+            className={`${textColor} hover:opacity-70 transition-all duration-300 uppercase tracking-widest text-sm font-light`}
           >
             {link.name}
           </Link>
@@ -78,7 +83,7 @@ export function Navbar() {
       <div className="flex items-center gap-6">
         <button 
           onClick={toggleCart}
-          className="relative text-foreground hover:text-white transition-colors"
+          className={`relative ${textColor} hover:opacity-70 transition-all`}
         >
           <ShoppingBag size={20} strokeWidth={1} />
           {cartCount > 0 && (
@@ -90,7 +95,7 @@ export function Navbar() {
 
         {/* Mobile Menu Button Placeholder */}
         <div className="md:hidden">
-        <button className="text-foreground p-2">
+        <button className={`${textColor} p-2`}>
           <span className="sr-only">Open menu</span>
           <div className="space-y-1.5">
             <span className="block w-6 h-px bg-current"></span>

@@ -18,7 +18,6 @@ export default function Home() {
       <IngredientsShowcase />
       <BentoGrid />
       <AmbassadorsSection />
-      <PurchaseCTA />
     </main>
   );
 }

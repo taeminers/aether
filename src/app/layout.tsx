@@ -6,6 +6,8 @@ import { AnnouncementBar } from "@/components/announcement-bar";
 import { CartProvider } from "@/context/cart-context";
 import { CartSidebar } from "@/components/cart/cart-sidebar";
 
+import { Footer } from "@/components/footer";
+
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
@@ -39,6 +41,7 @@ export default function RootLayout({
             <Navbar />
           </header>
           {children}
+          <Footer />
         </CartProvider>
       </body>
     </html>

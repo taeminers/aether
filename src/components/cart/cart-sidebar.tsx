@@ -5,19 +5,18 @@ import { X, ShoppingBag } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CartItemRow } from "./cart-item";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export function CartSidebar() {
   const { isCartOpen, toggleCart, items, cartTotal } = useCart();
   const [isCheckingOut, setIsCheckingOut] = useState(false);
+  const router = useRouter();
 
-  // Mock Checkout Flow
   const handleCheckout = () => {
     setIsCheckingOut(true);
-    setTimeout(() => {
-      alert("Checkout Simulation Complete! Thank you for your order.");
-      setIsCheckingOut(false);
-      toggleCart();
-    }, 1500);
+    toggleCart(); // Close sidebar
+    router.push("/checkout");
+    setIsCheckingOut(false);
   };
 
   return (

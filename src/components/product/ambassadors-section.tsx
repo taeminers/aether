@@ -26,7 +26,7 @@ const ambassadors = [
 
 export function AmbassadorsSection() {
   return (
-    <section className="w-full py-24 md:py-32 bg-black text-white overflow-hidden">
+    <section className="w-full py-24 md:py-32 bg-foreground text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         
         {/* Section Header */}
@@ -39,7 +39,7 @@ export function AmbassadorsSection() {
           <span className="block text-sm font-sans tracking-[0.2em] text-zinc-500 uppercase mb-2">
             The Collective
           </span>
-          <h2 className="text-3xl md:text-5xl font-display font-bold tracking-tight">
+          <h2 className="text-3xl md:text-5xl font-display text-background font-bold tracking-tight">
             Ambassadors.
           </h2>
         </motion.div>
