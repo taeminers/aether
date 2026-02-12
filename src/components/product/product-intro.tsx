@@ -11,10 +11,10 @@ export function ProductIntro() {
     offset: ["start end", "end start"],
   });
 
-  const textOpacity = useTransform(scrollYProgress, [0.1, 0.3, 0.4], [0, 1, 1]);
-  const textScale = useTransform(scrollYProgress, [0.1, 0.4], [0.95, 1]);
-  const imageY = useTransform(scrollYProgress, [0, 1], [50, -100]);
-  const imageScale = useTransform(scrollYProgress, [0, 1], [0.9, 1.4]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
+  const textScale = useTransform(scrollYProgress, [0, 0.2], [0.95, 1]);
+  const imageY = useTransform(scrollYProgress, [0, 1], [0, -50]); // Reduced movement range
+  const imageScale = useTransform(scrollYProgress, [0, 1], [0.95, 1.1]); // Subtler scale
 
   return (
     <section 
